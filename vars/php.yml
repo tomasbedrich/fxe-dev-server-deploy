@@ -1,0 +1,27 @@
+# used by geerlingguy.php role
+
+php_packages:
+  - php7.0-common
+  - php7.0-cli
+  - php7.0-dev
+  - php7.0-fpm
+  - libpcre3-dev
+  - php-apcu
+  - php-sqlite3
+  - php7.0-curl
+  - php7.0-gd
+  - php7.0-iconv
+  - php7.0-imap
+  - php7.0-json
+  - php7.0-mbstring
+  - php7.0-mcrypt
+  - php7.0-opcache
+  - php7.0-pdo
+  - php7.0-pdo-mysql
+  - php7.0-mysql
+  - php7.0-mysqli
+  - php7.0-tokenizer
+  - php7.0-xml
+
+php_enable_php_fpm: true
+php_date_timezone: "{{date_timezone}}"

@@ -1,0 +1,3 @@
+# used by manala.motd role
+
+manala_motd_template: templates/motd.j2

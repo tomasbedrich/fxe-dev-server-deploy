@@ -1,0 +1,15 @@
+- name: tomasbedrich.common
+  src: git+https://github.com/tomasbedrich/ansible-role-common.git
+- name: tomasbedrich.apache-adminer
+  src: git+https://github.com/tomasbedrich/ansible-role-apache-adminer.git
+- name: tomasbedrich.certbot-autorenew
+  src: git+https://github.com/tomasbedrich/ansible-role-certbot-autorenew.git
+- src: manala.motd
+- src: geerlingguy.security
+- src: geerlingguy.git
+- src: geerlingguy.mysql
+- src: geerlingguy.apache
+- src: geerlingguy.php
+- src: geerlingguy.apache-php-fpm
+- src: geerlingguy.adminer
+- src: geerlingguy.certbot

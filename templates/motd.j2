@@ -1,0 +1,22 @@
+===============================================================================
+
+WARNING, THIS HOST IS MANAGED BY
+
+     ___      .__   __.      _______. __  .______    __       _______
+    /   \     |  \ |  |     /       ||  | |   _  \  |  |     |   ____|
+   /  ^  \    |   \|  |    |   (----`|  | |  |_)  | |  |     |  |__
+  /  /_\  \   |  . `  |     \   \    |  | |   _  <  |  |     |   __|
+ /  _____  \  |  |\   | .----)   |   |  | |  |_)  | |  `----.|  |____
+/__/     \__\ |__| \__| |_______/    |__| |______/  |_______||_______|
+
+
+Any manual configuration you will do here can possibly be rewritten.
+Please note the headers of files you are editing.
+
+FQDN:    {{ansible_fqdn}}
+Distro:  {{ansible_distribution}} {{ansible_distribution_version}} {{ansible_distribution_release}}
+Virtual: {{'YES' if ansible_virtualization_role == 'guest' else 'NO'}}
+CPUs:    {{ansible_processor_vcpus}}
+RAM:     {{(ansible_memtotal_mb / 1000) | round(1)}}GB
+
+===============================================================================

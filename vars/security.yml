@@ -1,0 +1,6 @@
+# used by geerlingguy.security role
+
+security_sudoers_passwordless:
+  - deploy
+  - tomasbedrich
+  - filiprichter

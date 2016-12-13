@@ -1,0 +1,6 @@
+# used by tomasbedrich.common role
+
+date_timezone: Europe/Prague
+locales:
+  - en_US.UTF-8
+  - cs_CZ.UTF-8

@@ -1,0 +1,27 @@
+# used by geerlingguy.apache role
+
+server_name: "dev.fxe-gear.com"
+server_admin: "ja@tbedrich.cz"
+document_root: "/var/www/html"
+certificate_dir: "/etc/letsencrypt/live/{{ server_name }}"
+extra_parameters: |
+  <FilesMatch \.php$>
+    SetHandler "proxy:fcgi://127.0.0.1:9000"
+  </FilesMatch>
+
+
+# non-secure vhost is created only for redirection to HTTPS version
+apache_vhosts:
+  - servername: "{{ server_name }}"
+    serveradmin: "{{ server_admin }}"
+    documentroot: "{{ document_root }}"
+    extra_parameters: |
+      Redirect permanent / https://{{ server_name }}/
+
+apache_vhosts_ssl:
+  - servername: "{{ server_name }}"
+    serveradmin: "{{ server_admin }}"
+    documentroot: "{{ document_root }}"
+    extra_parameters: "{{ extra_parameters }}"
+    certificate_file: "{{ certificate_dir }}/fullchain.pem"
+    certificate_key_file: "{{ certificate_dir }}/privkey.pem"

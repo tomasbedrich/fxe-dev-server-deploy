@@ -1,0 +1,9 @@
+# used by geerlingguy.mysql role
+
+mysql_root_password: "{{lookup('password', 'credentials/mysql_root')}}"
+mysql_root_password_update: yes
+
+mysql_packages:
+  - mariadb-client
+  - mariadb-server
+  - python-mysqldb

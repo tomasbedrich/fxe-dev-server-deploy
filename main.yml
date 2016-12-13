@@ -1,0 +1,50 @@
+---
+- hosts: all
+  user: deploy
+  become: True
+  gather_facts: True
+
+  vars_files:
+      - vars/common.yml
+      - vars/motd.yml
+      - vars/security.yml
+      - vars/apache.yml
+      - vars/mysql.yml
+      - vars/php.yml
+
+  pre_tasks:
+    # this is normaly done by geerlingguy.mysql role, but there is a bug:
+    # https://github.com/geerlingguy/ansible-role-mysql/issues/145
+    - name: put mysql login credentials in place
+      template:
+        src: templates/.my.cnf.j2
+        dest: ~root/.my.cnf
+        owner: root
+        group: root
+        mode: 0644
+        force: no
+
+  roles:
+    - tomasbedrich.common
+    - manala.motd
+    - geerlingguy.security
+    - geerlingguy.git
+    - geerlingguy.mysql
+    - geerlingguy.apache
+    - geerlingguy.php
+    - geerlingguy.apache-php-fpm
+    - geerlingguy.adminer
+    - geerlingguy.certbot
+    - tomasbedrich.certbot-autorenew
+    - tomasbedrich.apache-adminer
+
+  tasks:
+    - name: install usefull packages
+      apt: pkg="{{item}}" state=installed
+      with_items:
+        - supervisor
+        - build-essential
+        - python3
+        - python3-venv
+        - python3-pip
+        - python3-requests
