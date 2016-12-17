@@ -1,0 +1,6 @@
+# used by geerlingguy.gogs role
+
+gogs_use_mysql: true
+gogs_db_name: gogs
+gogs_db_username: gogs
+gogs_db_password: "{{ lookup('password', 'credentials/mysql_gogs') }}"

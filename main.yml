@@ -11,6 +11,7 @@
       - vars/apache.yml
       - vars/mysql.yml
       - vars/php.yml
+      - vars/gogs.yml
 
   pre_tasks:
     # this is normaly done by geerlingguy.mysql role, but there is a bug:
@@ -29,6 +30,7 @@
     - manala.motd
     - geerlingguy.security
     - geerlingguy.git
+    - geerlingguy.gogs
     - geerlingguy.mysql
     - geerlingguy.apache
     - geerlingguy.php

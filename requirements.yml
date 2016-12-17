@@ -13,3 +13,4 @@
 - src: geerlingguy.apache-php-fpm
 - src: geerlingguy.adminer
 - src: geerlingguy.certbot
+- src: geerlingguy.gogs

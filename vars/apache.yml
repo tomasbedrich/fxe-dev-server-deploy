@@ -9,6 +9,14 @@ extra_parameters: |
     SetHandler "proxy:fcgi://127.0.0.1:9000"
   </FilesMatch>
 
+  # GIT server (Gogs)
+  <Proxy *>
+    Order allow,deny
+    Allow from all
+  </Proxy>
+  ProxyPass /git http://127.0.0.1:3000
+  ProxyPassReverse /git http://127.0.0.1:3000
+
 
 # non-secure vhost is created only for redirection to HTTPS version
 apache_vhosts:
