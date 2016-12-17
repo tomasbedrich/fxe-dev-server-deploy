@@ -11,8 +11,9 @@ Installed software
 - Apache 2
 - PHP 7.0 (with Apache FPM bridge)
 - MySQL (MariaDB)
-- Adminer ([here](https://dev.fxe-gear.com/adminer))
 - Certbot (with certificate autorenew)
+- [Adminer](https://www.adminer.org/) ([here](https://dev.fxe-gear.com/adminer))
+- [Gogs](https://gogs.io/) ([here](https://dev.fxe-gear.com/git))
 
 Deploying
 ---
