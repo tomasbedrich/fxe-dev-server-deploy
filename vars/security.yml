@@ -4,3 +4,4 @@ security_sudoers_passwordless:
   - deploy
   - tomasbedrich
   - filiprichter
+  - tomasprokop
