@@ -12,6 +12,7 @@
       - vars/mysql.yml
       - vars/php.yml
       - vars/gogs.yml
+      - vars/certbot.yml
 
   pre_tasks:
     # this is normaly done by geerlingguy.mysql role, but there is a bug:
@@ -36,8 +37,8 @@
     - geerlingguy.php
     - geerlingguy.apache-php-fpm
     - geerlingguy.adminer
-    - geerlingguy.certbot
-    - tomasbedrich.certbot-autorenew
+    - name: geerlingguy.certbot
+      tags: certbot
     - tomasbedrich.apache-adminer
 
   tasks:

@@ -2,8 +2,6 @@
   src: git+https://github.com/tomasbedrich/ansible-role-common.git
 - name: tomasbedrich.apache-adminer
   src: git+https://github.com/tomasbedrich/ansible-role-apache-adminer.git
-- name: tomasbedrich.certbot-autorenew
-  src: git+https://github.com/tomasbedrich/ansible-role-certbot-autorenew.git
 - src: manala.motd
 - src: geerlingguy.security
 - src: geerlingguy.git
